@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        #container {
+            width: 700px; 
+            height: 500px; 
+            position: absolute; 
+            left: 8%; 
+            right: 0;
+            top: 0; 
+            bottom: 0; 
+            margin: auto; 
+            /* background: lightblue; */
+            transform: scale(1.2);
+        }
+
+        #partA {
+            width: 40px;
+            height: 55px;
+            position: absolute;
+            left: 20%;
+            top: 50%;
+            margin: auto;
+            background: linear-gradient(rgb(232, 232, 232) 30%, rgb(196, 196, 196) 65%, rgb(232, 232, 232) 90%);
+            transform: translate(-50%, -50%);
+            border: solid 1px grey; 
+        }
+
+        #partA::before {
+            content: "";
+            width: 40px;
+            height: 85px;
+            position: absolute;
+            left: -100%;
+            top: 50%;
+            background: linear-gradient(rgb(232, 232, 232) 35%, rgb(196, 196, 196) 60%, rgb(232, 232, 232) 85%);
+            transform: translateY(-50%);
+            border-radius: 7%;
+            border: solid 1px grey; 
+        }
+
+        #partA::after {
+            content: "";
+            width: 40px;
+            height: 65px;
+            position: absolute;
+            left: 858%;
+            top: 50%;
+            margin: auto;
+            background: linear-gradient(rgb(232, 232, 232) 30%, rgb(196, 196, 196) 65%, rgb(232, 232, 232) 90%);
+            transform: translate(-50%, -50%);
+            border: solid 1px grey;
+            border-radius: 0 5% 5% 0;
+        }
+
+        #partB {
+            width: 40px;
+            height: 90px;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            margin: auto;
+            background: black;
+            transform: translateY(-50%);
+            border: solid 1px grey; 
+            /* z-index: 2; */
+        }
+
+        #partB::before { 
+            content: "";
+            width: 120px;
+            height: 90px;
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            background: linear-gradient(rgb(232, 232, 232) 35%, rgb(196, 196, 196) 60%, rgb(232, 232, 232) 85%);
+            transform: translateY(-50%);
+            border-radius: 3% 0 0 3%;
+            border: solid 1px grey; 
+        }
+
+        #partB::after { 
+            content: "";
+            width: 120px;
+            height: 90px;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            background: linear-gradient(lightgoldenrodyellow 35%, rgb(223, 223, 188) 60%, lightgoldenrodyellow 85%);
+            transform: translateY(-50%);
+            border-radius: 0 3% 3% 0;
+            border: solid 1px grey; 
+            z-index: -1;
+        }
+
+        #txt {
+            width: 90px;
+            height: 15px;
+            position: absolute;
+            left: 23.5%;
+            top: 55.5%;
+            font-size: 0.7rem;
+            color: grey;
+            /* z-index: 3; */
+        }
+
+        #partC {
+            width: 75px;
+            height: 0px;
+            position: absolute;
+            left: 69%;
+            top: 50%;
+            border-top: solid 0.1px black;
+        }
+
+        .scale {
+            width: 30%;
+            height: 20%;
+            border-right: solid 1px grey;
+            position: absolute;
+        }
+
+        .scale::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-right: solid 1px grey;
+            position: absolute;
+            right: 100%;
+            top: 0%;
+            /* background: green;  */
+        }
+
+        .scale::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-right: solid 1px grey;
+            position: absolute;
+            left: 100%;
+            top: 0%;
+        }
+
+        .s1 {
+            right: 337%;
+        }
+
+        .s2 {
+            right: 242%; 
+        }
+
+        .s3 {
+            right: 147%; 
+        }
+
+        .s4 {
+            left: 26%; 
+        }
+
+        .s5 {
+            left: 121%;  
+            /* border-left: solid 1px black;  */
+        }
+
+        .s6 {
+            left: 214%;  
+        }
+
+        .s7 {
+            left: 311%;  
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="partA"></div>
+        <div id="partB">
+            <div class="scale s1"></div>
+            <div class="scale s2"></div>
+            <div class="scale s3"></div>
+            <!-- <div class="scale s4"></div> -->
+            <div class="scale s5"></div>
+            <div class="scale s6"></div>
+            <div class="scale s7"></div>
+        </div>
+        <div id="txt">Made In Taiwan</div>
+        <div id="partC"></div>
+    </div>
+</body>
+</html>

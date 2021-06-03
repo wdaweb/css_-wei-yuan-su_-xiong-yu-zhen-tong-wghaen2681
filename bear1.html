@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0; 
+        padding: 0; 
+    }
+
+    #bear_body {
+        width: 300px; 
+        height: 300px; 
+        border-radius: 50%;
+        background: black;
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        top: 0; 
+        bottom: 0; 
+        margin: auto; 
+    }
+
+    #bear_body::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        border-radius: 50%;
+        background: red;
+        left: -5%;
+        top: 35%;
+    }
+    
+    #bear_body::after {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        border-radius: 50%;
+        background: red;
+        right: -5%;
+        top: 35%;
+    }
+    
+    #bear_ear_left { 
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        left: 17%;
+        top: 7%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #bear_ear_left::after { 
+        content: "";
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #bear_ear_right { 
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        right: 17%;
+        top: 7%;
+        transform: translate(50%, -50%);
+    }
+    
+    #bear_ear_right::after { 
+        content: "";
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #bear_eye_left {
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        left: 32%;
+        top: 28%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #bear_eye_left::after { 
+        content: "";
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #bear_eye_right {
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        right: 32%;
+        top: 28%;
+        transform: translate(50%, -50%);
+    }
+    
+    #bear_eye_right::after { 
+        content: "";
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #mouth {
+        width: 120px;
+        height: 85px;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, -50%);
+    }
+
+    #mouth::before {
+        content: "";
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        left: 50%;
+        top: 22%;
+        transform: translate(-50%, -50%);
+    }
+
+    #mouth::after {
+        content: "";
+        width: 70px;
+        height: 25px;
+        position: absolute;
+        border-radius: 50%;
+        background: black;
+        left: 50%;
+        top: 63%;
+        transform: translate(-50%, -50%);
+    }
+
+    #bear_chest {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 60px 60px 0 60px;
+        border-color: #ffffff transparent transparent transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #bear_chest::before {
+        content: ""; 
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 20px;
+        border-color: #000 transparent transparent transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translate(-50%, 1%)
+    }
+
+    /* 這項調整位置怪怪的 */
+    #bear_chest::after {
+        content: ""; 
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 20px;
+        border-color: #000 transparent transparent transparent;
+        position: absolute;
+        left: 50%; 
+        bottom: 40px; 
+        transform: translateX(-50%)
+        /* transform: translate(-50%, -100%) */
+    }
+    </style>
+</head>
+<body>
+    <div id="bear_body">
+        <div id="bear_ear_left"></div>
+        <div id="bear_ear_right"></div>
+        <div id="bear_eye_left"></div>
+        <div id="bear_eye_right"></div>
+        <div id="mouth"></div>
+        <div id="bear_chest"></div>
+    </div>
+</body>
+</html>
